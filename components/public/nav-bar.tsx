@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
@@ -27,21 +29,21 @@ export function Navbar() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/features" passHref legacyBehavior>
+              <Link href="/features">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Características
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/pricing" passHref legacyBehavior>
+              <Link href="/pricing">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Precios
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/contact" passHref legacyBehavior>
+              <Link href="/contact">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Contacto
                 </NavigationMenuLink>
