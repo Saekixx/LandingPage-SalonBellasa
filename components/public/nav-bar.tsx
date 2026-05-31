@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, ShoppingCart, UserPlus } from "lucide-react";
+import { Menu, ShoppingCart, User, UserPlus } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -139,9 +139,9 @@ export function Navbar() {
             className="text-slate-700 hover:text-purple-700 flex items-center gap-2 font-extrabold tracking-tight"
             asChild
           >
-            <Link href="/register">
-              <UserPlus className="h-4 w-4" />
-              <span>Registrarse</span>
+            <Link href="/auth/login">
+              <User className="h-4 w-4" />
+              <span>Login</span>
             </Link>
           </Button>
 
@@ -216,9 +216,9 @@ export function Navbar() {
                   className="w-full justify-start gap-2 font-extrabold tracking-tight"
                   asChild
                 >
-                  <Link href="/register">
-                    <UserPlus className="h-4 w-4" />
-                    Registrarse
+                  <Link href="/auth/login">
+                    <User className="h-4 w-4" />
+                    Login
                   </Link>
                 </Button>
 
