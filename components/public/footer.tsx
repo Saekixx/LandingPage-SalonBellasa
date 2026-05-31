@@ -10,7 +10,7 @@ function Footer() {
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-3">
             {/* Logo box with gradient */}
-            <div className="w-12 h-12 bg-gradient-to-br from-[#d946ef] via-[#a855f7] to-[#7c3aed] rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-linear-to-br from-[#d946ef] via-[#a855f7] to-[#7c3aed] rounded-lg flex items-center justify-center">
               {/* Star Icon - simplificado */}
               <svg
                 viewBox="0 0 24 24"

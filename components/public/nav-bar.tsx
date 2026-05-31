@@ -21,6 +21,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-tr from-purple-700 to-pink-600 text-white shadow-sm">
             <svg
@@ -37,59 +38,71 @@ export function Navbar() {
           </span>
         </Link>
 
+        {/* Desktop Navigation Menu */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="space-x-1">
+            {/* ✅ CORREGIDO: quitado asChild de aquí y movido abajo */}
             <NavigationMenuItem>
-              <Link href="/servicios">
-                <NavigationMenuLink
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/servicios"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Servicios
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-              <Link href="/productos">
-                <NavigationMenuLink
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/productos"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Productos
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-              <Link href="/galeria">
-                <NavigationMenuLink
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/galeria"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Galería
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-              <Link href="/nosotros">
-                <NavigationMenuLink
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/nosotros"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Nosotros
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-              <Link href="/contactos">
-                <NavigationMenuLink
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/contactos"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Contactos
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
+        {/* Desktop Actions */}
         <div className="hidden lg:flex items-center space-x-4">
           <HoverCard openDelay={100} closeDelay={200}>
-            <HoverCardTrigger asChild>
+            <HoverCardTrigger>
               <Button
                 variant="ghost"
                 size="icon"
@@ -140,6 +153,7 @@ export function Navbar() {
           </Button>
         </div>
 
+        {/* Mobile Menu */}
         <div className="lg:hidden flex items-center space-x-3">
           <Button
             variant="ghost"
