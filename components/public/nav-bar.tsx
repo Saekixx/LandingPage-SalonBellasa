@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { Menu, ShoppingCart, UserPlus } from "lucide-react";
-
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -17,14 +15,14 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import Link from "next/link";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        {/* LOGO (Estilo Aura Beauty con ExtraBold y Tracking Ajustado) */}
         <Link href="/" className="flex items-center space-x-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-purple-700 to-pink-600 text-white shadow-sm">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-tr from-purple-700 to-pink-600 text-white shadow-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -34,17 +32,15 @@ export function Navbar() {
               <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z" />
             </svg>
           </div>
-          {/* Añadido font-extrabold y tracking-tighter */}
           <span className="text-xl font-extrabold tracking-tighter text-purple-900">
             Salon de Belleza
           </span>
         </Link>
 
-        {/* MENÚ ESCRITORIO (Todos con font-extrabold y tracking-tight) */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="space-x-1">
             <NavigationMenuItem>
-              <Link href="/servicios" passHref legacyBehavior>
+              <Link href="/servicios">
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
@@ -53,7 +49,7 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/productos" passHref legacyBehavior>
+              <Link href="/productos">
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
@@ -62,7 +58,7 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/galeria" passHref legacyBehavior>
+              <Link href="/galeria">
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
@@ -71,7 +67,7 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/nosotros" passHref legacyBehavior>
+              <Link href="/nosotros">
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
@@ -80,7 +76,7 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/contactos" passHref legacyBehavior>
+              <Link href="/contactos">
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
@@ -91,9 +87,7 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* BOTONES DE ACCIÓN (ESCRITORIO) */}
         <div className="hidden lg:flex items-center space-x-4">
-          {/* HOVER CARD DEL CARRITO */}
           <HoverCard openDelay={100} closeDelay={200}>
             <HoverCardTrigger asChild>
               <Button
@@ -109,7 +103,6 @@ export function Navbar() {
             </HoverCardTrigger>
             <HoverCardContent className="w-80 p-4" align="end">
               <div className="space-y-2">
-                {/* Añadido font-extrabold */}
                 <h4 className="font-extrabold text-sm tracking-tight text-slate-900">
                   Tu Carrito
                 </h4>
@@ -128,7 +121,6 @@ export function Navbar() {
             </HoverCardContent>
           </HoverCard>
 
-          {/* REGISTRAR USUARIO (Añadido font-extrabold) */}
           <Button
             variant="ghost"
             className="text-slate-700 hover:text-purple-700 flex items-center gap-2 font-extrabold tracking-tight"
@@ -140,16 +132,14 @@ export function Navbar() {
             </Link>
           </Button>
 
-          {/* BOTÓN REPLICADO DE LA FOTO (Añadido font-extrabold) */}
           <Button
-            className="rounded-full bg-gradient-to-r from-purple-800 to-pink-600 px-6 py-2 font-extrabold tracking-tight text-white shadow-md transition-transform hover:opacity-95 active:scale-95"
+            className="rounded-full bg-linear-to-r from-purple-800 to-pink-600 px-6 py-2 font-extrabold tracking-tight text-white shadow-md transition-transform hover:opacity-95 active:scale-95"
             asChild
           >
             <Link href="/agendar">Agendar cita</Link>
           </Button>
         </div>
 
-        {/* MENÚ MÓVIL */}
         <div className="lg:hidden flex items-center space-x-3">
           <Button
             variant="ghost"
@@ -169,9 +159,8 @@ export function Navbar() {
                 <span className="sr-only">Abrir menú</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px]">
+            <SheetContent side="right" className="w-75">
               <nav className="flex flex-col space-y-4 mt-8">
-                {/* Añadido font-extrabold */}
                 <span className="text-lg font-extrabold tracking-tighter text-purple-900 border-b pb-2">
                   Aura Beauty
                 </span>
@@ -220,7 +209,7 @@ export function Navbar() {
                 </Button>
 
                 <Button
-                  className="w-full rounded-full bg-gradient-to-r from-purple-800 to-pink-600 text-white font-extrabold tracking-tight"
+                  className="w-full rounded-full bg-linear-to-r from-purple-800 to-pink-600 text-white font-extrabold tracking-tight"
                   asChild
                 >
                   <Link href="/agendar">Agendar cita</Link>
