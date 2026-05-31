@@ -1,5 +1,7 @@
 import CarouselProducto from "@/components/CarouselProducto";
+import CarouselServicio from "@/components/CarouselServicio";
 import productos from "@/data/producto.json";
+import servicios from "@/data/servicio.json";
 
 function Home() {
   return (
@@ -31,7 +33,7 @@ function Home() {
 
           {/* Contenedor del Carrusel de Productos */}
           <div className="w-full">
-            <CarouselProducto productos={productos} />
+            <CarouselServicio servicios={servicios} />
           </div>
         </div>
 
