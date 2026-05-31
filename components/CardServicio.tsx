@@ -62,10 +62,10 @@ function CardServicio({ servicio, props }: CardServicioProps) {
         {/* Fila Inferior: Precio y Botón Agendar */}
         <div className="mt-6 flex items-center justify-between pt-2">
           <span className="text-3xl font-extrabold text-[#4a0e4e]">
-            ${servicio.precio.toFixed(2)}
+            s/{servicio.precio.toFixed(2)}
           </span>
           <Button
-            className="rounded-full bg-gradient-to-r from-purple-800 to-pink-600 px-6 py-5 font-bold text-white shadow-md transition-all hover:opacity-95 active:scale-95 cursor-pointer"
+            className="rounded-full bg-linear-to-r from-purple-800 to-pink-600 px-6 py-5 font-bold text-white shadow-md transition-all hover:opacity-95 active:scale-95 cursor-pointer"
             onClick={() => handleAgendar(servicio.id)}
           >
             Agendar
