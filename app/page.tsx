@@ -1,5 +1,5 @@
-import CarouselProducto from "@/components/CarouselProducto";
-import CarouselServicio from "@/components/CarouselServicio";
+import CarouselProducto from "@/components/producto/CarouselProducto";
+import CarouselServicio from "@/components/servicio/CarouselServicio";
 import productos from "@/data/producto.json";
 import servicios from "@/data/servicio.json";
 
