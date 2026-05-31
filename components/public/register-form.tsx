@@ -34,7 +34,7 @@ const inputClass = `pl-9 h-11 rounded-xl border-gray-200 placeholder:text-gray-3
 
 const fields = [
   { id: "name",     label: "Nombre Completo",    type: "text",     icon: User,  placeholder: "Ej. María García"   },
-  { id: "whatsapp", label: "WhatsApp",            type: "tel",      icon: Phone, placeholder: "+34 600 000 000"    },
+  { id: "whatsapp", label: "WhatsApp",            type: "tel",      icon: Phone, placeholder: "+51 900 000 000"    },
   { id: "email",    label: "Correo Electrónico",  type: "email",    icon: Mail,  placeholder: "tu@email.com"       },
 ];
 
