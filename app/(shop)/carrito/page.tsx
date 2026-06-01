@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, CreditCard, Wallet, Lock } from "lucide-react";
+import { ArrowLeft, Wallet, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import CardCarritoProducto from "@/components/carrito/CardCarritoProducto";
@@ -15,6 +15,22 @@ interface ItemCarrito {
   precio: number;
   imagen: string;
   cantidad: number;
+}
+
+// Icono minimalista de tarjeta para calcar exactamente el de tu imagen image_5122f8.png
+function CardIconMinimal({ className }: { className?: string }) {
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      className={className}
+    >
+      <rect x="2" y="5" width="20" height="14" rx="2" />
+      <line x1="2" y1="10" x2="22" y2="10" />
+    </svg>
+  );
 }
 
 export default function CarritoPage() {
@@ -109,14 +125,15 @@ export default function CarritoPage() {
           </Link>
         </div>
 
+        {/* COLUMNA DERECHA: Resumen del Pedido */}
         <div className="lg:pt-14">
-          <Card className="rounded-3xl border-none bg-white p-6 shadow-sm">
+          <Card className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
             <CardContent className="space-y-6 p-0">
               <h2 className="text-xl font-bold text-[#2d0b30]">
                 Resumen del pedido
               </h2>
 
-              {/* desglose de precios */}
+              {/* Desglose de precios */}
               <div className="space-y-3 text-sm font-medium text-gray-500">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
@@ -134,9 +151,10 @@ export default function CarritoPage() {
 
               <hr className="border-gray-100" />
 
+              {/* Sección de Total */}
               <div className="space-y-1">
                 <div className="flex items-baseline justify-between">
-                  <span className="text-base font-semibold text-gray-700">Total</span>
+                  <span className="text-base font-bold text-gray-800">Total</span>
                   <span className="text-3xl font-extrabold text-[#2d0b30]">
                     ${total.toFixed(2)}
                   </span>
@@ -146,16 +164,17 @@ export default function CarritoPage() {
                 </p>
               </div>
 
+              {/* Botón de Redirección Automática a /pasarela-pago */}
               <Link href="/pasarela-pago" passHref legacyBehavior>
-                <Button className="w-full rounded-2xl bg-gradient-to-r from-[#4a0e4e] to-[#800f80] py-6 text-sm font-bold text-white shadow-md transition-all hover:opacity-95 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2">
+                <Button className="w-full rounded-2xl bg-[#801a80] hover:bg-[#661466] py-6 text-sm font-semibold text-white shadow-sm transition-all active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2">
                   <span>Proceder al pago</span>
-                  <CreditCard className="h-4 w-4" />
+                  <CardIconMinimal className="h-4 w-4" />
                 </Button>
               </Link>
 
-              {/* Iconos de confianza e indicadores inferiores */}
+              {/* Iconos inferiores de confianza */}
               <div className="flex justify-center gap-4 text-gray-300 pt-2">
-                <CreditCard className="h-5 w-5" />
+                <CardIconMinimal className="h-5 w-5" />
                 <Wallet className="h-5 w-5" />
                 <Lock className="h-5 w-5" />
               </div>
