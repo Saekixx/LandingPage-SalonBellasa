@@ -34,7 +34,7 @@ export function Navbar() {
             </svg>
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-purple-900">
-            Aura Beauty
+            Salon de Belleza
           </span>
         </Link>
 
