@@ -1,5 +1,4 @@
-import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react"; // Necesitarás instalar lucide-react: npm install lucide-react
+import { Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 
 function Footer() {
@@ -9,9 +8,7 @@ function Footer() {
         {/* Columna 1: Logo y Tagline */}
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-3">
-            {/* Logo box with gradient */}
             <div className="w-12 h-12 bg-linear-to-br from-[#d946ef] via-[#a855f7] to-[#7c3aed] rounded-lg flex items-center justify-center">
-              {/* Star Icon - simplificado */}
               <svg
                 viewBox="0 0 24 24"
                 fill="white"
@@ -21,11 +18,13 @@ function Footer() {
                 <path d="M12 2l2.4 7.2h7.6l-6.15 4.5 2.4 7.2-6.15-4.5-6.15 4.5 2.4-7.2-6.15-4.5h7.6z" />
               </svg>
             </div>
-            <span className="text-xl font-bold">Salon de Belleza</span>
+            <span className="text-xl font-bold tracking-tighter">
+              Aura Beauty
+            </span>
           </div>
           <p className="text-gray-300 leading-relaxed max-w-xs">
             Elevando los estándares de belleza y bienestar personal con un toque
-            de exclusividad y cuidado.
+            of exclusividad y cuidado.
           </p>
         </div>
 
@@ -45,13 +44,13 @@ function Footer() {
             Productos
           </Link>
           <Link
-            href="/galeria"
+            href="/#galeria"
             className="text-gray-300 hover:text-white transition-colors"
           >
             Galería
           </Link>
           <Link
-            href="/nosotros"
+            href="/#nosotros"
             className="text-gray-300 hover:text-white transition-colors"
           >
             Nosotros
@@ -80,7 +79,7 @@ function Footer() {
             Privacidad
           </Link>
           <Link
-            href="/contacto"
+            href="/#contactos"
             className="text-gray-300 hover:text-white transition-colors"
           >
             Contactos
@@ -116,7 +115,6 @@ function Footer() {
         className="fixed bottom-6 right-6 w-14 h-14 bg-[#32D35A] rounded-full flex items-center justify-center shadow-lg hover:bg-[#2bc250] transition-colors z-50 group"
         aria-label="Contactar por WhatsApp"
       >
-        {/* WhatsApp Icon */}
         <svg
           viewBox="0 0 24 24"
           fill="white"
