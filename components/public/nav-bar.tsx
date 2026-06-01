@@ -1,9 +1,12 @@
 "use client";
 
-import { Menu, ShoppingCart, UserPlus } from "lucide-react";
+import { Menu, ShoppingCart, User } from "lucide-react";
 import {
-  NavigationMenu, NavigationMenuItem, NavigationMenuLink,
-  NavigationMenuList, navigationMenuTriggerStyle,
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -13,12 +16,6 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import Link from "next/link";
-
-const navLinks = [
-  { href: "/features", label: "Características" },
-  { href: "/pricing",  label: "Precios"          },
-  { href: "/contact",  label: "Contacto"          },
-];
 
 export function Navbar() {
   return (
@@ -37,14 +34,13 @@ export function Navbar() {
             </svg>
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-purple-900">
-            Salon de Belleza
+            Aura Beauty
           </span>
         </Link>
 
         {/* Desktop Navigation Menu */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="space-x-1">
-            {/* ✅ CORREGIDO: quitado asChild de aquí y movido abajo */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
@@ -67,10 +63,11 @@ export function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
+            {/* Enlaces de Anclaje Interno */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="/galeria"
+                  href="/#galeria"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Galería
@@ -81,7 +78,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="/nosotros"
+                  href="/#nosotros"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Nosotros
@@ -92,7 +89,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="/contactos"
+                  href="/#contactos"
                   className={`${navigationMenuTriggerStyle()} text-slate-900 font-extrabold tracking-tight hover:text-purple-700`}
                 >
                   Contactos
@@ -142,9 +139,9 @@ export function Navbar() {
             className="text-slate-700 hover:text-purple-700 flex items-center gap-2 font-extrabold tracking-tight"
             asChild
           >
-            <Link href="/register">
-              <UserPlus className="h-4 w-4" />
-              <span>Registrarse</span>
+            <Link href="/auth/login">
+              <User className="h-4 w-4" />
+              <span>Login</span>
             </Link>
           </Button>
 
@@ -194,19 +191,19 @@ export function Navbar() {
                   Productos
                 </Link>
                 <Link
-                  href="/galeria"
+                  href="/#galeria"
                   className="text-base font-extrabold tracking-tight text-slate-700 hover:text-purple-700"
                 >
                   Galería
                 </Link>
                 <Link
-                  href="/nosotros"
+                  href="/#nosotros"
                   className="text-base font-extrabold tracking-tight text-slate-700 hover:text-purple-700"
                 >
                   Nosotros
                 </Link>
                 <Link
-                  href="/contactos"
+                  href="/#contactos"
                   className="text-base font-extrabold tracking-tight text-slate-700 hover:text-purple-700"
                 >
                   Contactos
@@ -219,9 +216,9 @@ export function Navbar() {
                   className="w-full justify-start gap-2 font-extrabold tracking-tight"
                   asChild
                 >
-                  <Link href="/register">
-                    <UserPlus className="h-4 w-4" />
-                    Registrarse
+                  <Link href="/auth/login">
+                    <User className="h-4 w-4" />
+                    Login
                   </Link>
                 </Button>
 
@@ -235,7 +232,6 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
         </div>
-
       </div>
     </header>
   );
