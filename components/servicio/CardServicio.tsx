@@ -61,7 +61,7 @@ function CardServicio({ servicio, props }: CardServicioProps) {
 
         {/* Fila Inferior: Precio y Botón Agendar */}
         <div className="mt-6 flex items-center justify-between pt-2">
-          <span className="text-3xl font-extrabold text-[#4a0e4e]">
+          <span className="text-2xl font-extrabold text-[#4a0e4e]">
             s/{servicio.precio.toFixed(2)}
           </span>
           <Button

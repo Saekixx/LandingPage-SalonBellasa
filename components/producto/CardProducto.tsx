@@ -48,7 +48,7 @@ function CardProductoInteractive({ producto, props }: CardProductoProps) {
           </CardDescription>
         </CardHeader>
         <div className="mt-4 flex items-center justify-between">
-          <span className="text-3xl font-extrabold text-[#4a0e4e]">
+          <span className="text-2xl font-extrabold text-[#4a0e4e]">
             S/{producto.precio.toFixed(2)}
           </span>
           <Button
