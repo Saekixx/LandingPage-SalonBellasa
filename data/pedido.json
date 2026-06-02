@@ -1,0 +1,58 @@
+[
+  {
+    "idPedido": "AB-92834",
+    "fecha": "12 de Oct, 2023",
+    "total": 124.5,
+    "estado": "Entregado",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Serum Revitalizante Aura",
+        "categoria": "Skincare",
+        "precio": 45.0,
+        "imagen": "/images/serum.png",
+        "cantidad": 1
+      },
+      {
+        "id": 2,
+        "nombre": "Crema Hidratante Pro",
+        "categoria": "Skincare",
+        "precio": 79.5,
+        "imagen": "/images/crema.png",
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "idPedido": "AB-93012",
+    "fecha": "28 de Oct, 2023",
+    "total": 32.0,
+    "estado": "En camino",
+    "productos": [
+      {
+        "id": 3,
+        "nombre": "Tónico Equilibrante Botánico",
+        "categoria": "Skincare",
+        "precio": 32.0,
+        "imagen": "/images/tonico.png",
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "idPedido": "AB-93155",
+    "fecha": "02 de Nov, 2023",
+    "total": 58.0,
+    "estado": "Procesando",
+    "productos": [
+      {
+        "id": 4,
+        "nombre": "Kit de Limpieza Profunda",
+        "categoria": "Skincare",
+        "precio": 58.0,
+        "imagen": "/images/kit.png",
+        "cantidad": 1
+      }
+    ]
+  }
+]

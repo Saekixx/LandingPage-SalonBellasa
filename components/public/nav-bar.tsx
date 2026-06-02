@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, ShoppingCart, User } from "lucide-react";
+import { Menu, Package, ShoppingCart, User } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -142,6 +142,17 @@ export function Navbar() {
             <Link href="/auth/login">
               <User className="h-4 w-4" />
               <span>Login</span>
+            </Link>
+          </Button>
+
+          <Button
+            variant="ghost"
+            className="text-slate-700 hover:text-purple-700 flex items-center gap-2 font-extrabold tracking-tight"
+            asChild
+          >
+            <Link href="/pedidos">
+              <Package className="h-4 w-4" />
+              <span>Mis Pedidos</span>
             </Link>
           </Button>
 
