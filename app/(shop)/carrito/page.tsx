@@ -149,6 +149,7 @@ export default function CarritoPage() {
                 </div>
               </div>
 
+
               <hr className="border-gray-100" />
 
               {/* Sección de Total */}
