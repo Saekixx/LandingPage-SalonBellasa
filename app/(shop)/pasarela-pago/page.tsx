@@ -113,8 +113,8 @@ export default function PasarelaPagoPage() {
                 </span>
               </div>
 
-              <Link href="/confirmacion-pedido">
-                <Button className="w-full rounded-2xl bg-gradient-to-r from-[#4a0e4e] to-[#800f80] py-6 text-base font-bold text-white shadow-md transition-all hover:opacity-95 active:scale-[0.98] cursor-pointer">
+              <Link href="/pasarela-pago/confirmacion-pedido">
+                <Button className="w-full rounded-2xl bg-linear-to-r from-[#4a0e4e] to-[#800f80] py-6 text-base font-bold text-white shadow-md transition-all hover:opacity-95 active:scale-[0.98] cursor-pointer">
                   Confirmar Pago
                 </Button>
               </Link>
